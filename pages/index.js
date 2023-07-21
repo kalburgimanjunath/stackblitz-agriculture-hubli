@@ -16,16 +16,15 @@ export default function Home() {
     { name: 'Contact Us', link: 'contactus' },
   ];
   return (
-    <div className={styles.container}>
-      <Menu />
+    <div>
       <Category catergory={catergory} />
       <Banner />
-      <h1>Crop Guide</h1>
-      <div>
+      {/* <h1>Crop Guide</h1> */}
+      <div className="bg-gray-100 flex flex-wrap">
         {menuitems &&
           menuitems.map((item) => {
             return (
-              <div>
+              <div className="p-20 bg-pink-50 hover:bg-pink-100 cursor-pointer">
                 <Link href={`/${item.link}`}>{item.name}</Link>
               </div>
             );

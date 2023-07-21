@@ -1,6 +1,7 @@
+import Link from 'next/link';
 export default function Menu() {
   const menus = [
-    { name: 'Home', link: 'home' },
+    { name: 'Home', link: '' },
     { name: 'Shop', link: 'shop' },
     { name: 'Practices', link: 'practices' },
     { name: 'community', link: 'community' },
@@ -10,10 +11,14 @@ export default function Menu() {
     { name: 'Contact Us', link: 'contactus' },
   ];
   return (
-    <div>
+    <div className="flex bg-gray-200">
       {menus &&
         menus.map((item) => {
-          return <div>{item.name}</div>;
+          return (
+            <div className="p-4 cursor-pointer justify-evenly hover:bg-pink-100 font-medium">
+              <Link href={`/${item.link}`}>{item.name}</Link>
+            </div>
+          );
         })}
     </div>
   );
