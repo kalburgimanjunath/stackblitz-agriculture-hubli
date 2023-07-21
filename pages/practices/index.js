@@ -1,4 +1,5 @@
-export default function Practices() {
+import Link from 'next/link';
+export default function index() {
   const practices = [
     'Tea',
     'Areconut',
@@ -15,11 +16,13 @@ export default function Practices() {
           practices.map((item) => {
             return (
               <div className="m-1">
-                <img
-                  className="rounded rounded-lg"
-                  src="https://picsum.photos/seed/picsum/200/300"
-                />
-                <div className="font-normal">{item}</div>
+                <Link href={`practices/${item}`}>
+                  <img
+                    className="rounded rounded-lg"
+                    src="https://picsum.photos/seed/picsum/200/300"
+                  />
+                  <div className="font-normal">{item}</div>
+                </Link>
               </div>
             );
           })}
