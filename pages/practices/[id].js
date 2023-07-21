@@ -1,5 +1,5 @@
-import { useParam } from 'next/router';
+// import { useParam } from 'next/router';
 export default function index() {
-  const [id] = useParam();
-  return <div>{id}</div>;
+  // const [id] = useParam();
+  return <div>id</div>;
 }
